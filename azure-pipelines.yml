@@ -1,4 +1,9 @@
 pool:
+- task: NuGetCommand@2
+  inputs:
+    command: 'restore'
+    restoreSolution: '**/*.sln'
+    feedsToUse: 'select'
   vmImage: 'Ubuntu-18.04'
 
 variables:
